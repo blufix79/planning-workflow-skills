@@ -74,14 +74,7 @@ Per il flusso umano e gli esempi di invocazione, consulta la guida: [English](do
 
 La validazione controlla che ogni skill abbia `SKILL.md`, front matter con soli `name` e `description`, nome coerente con la directory, e riferimenti asset essenziali presenti.
 
-## Release e aggiornamenti
-
-Crea una release GitHub o un tag, per esempio:
-
-```bash
-git tag v0.1.0
-git push origin v0.1.0
-```
+## Aggiornamenti
 
 Per aggiornare le skill già installate:
 

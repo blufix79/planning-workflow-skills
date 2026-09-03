@@ -74,14 +74,7 @@ For the human workflow and invocation examples, see the guides: [English](docs/o
 
 The validator checks that each skill has `SKILL.md`, front matter containing only `name` and `description`, a name matching its directory, and the required assets.
 
-## Releases and updates
-
-Create a GitHub release or tag, for example:
-
-```bash
-git tag v0.1.0
-git push origin v0.1.0
-```
+## Updates
 
 To update installed skills:
 
