@@ -1,0 +1,19 @@
+{
+  "name": "planning-workflow-skills",
+  "version": "0.1.0",
+  "private": true,
+  "license": "MIT",
+  "description": "Standalone planning workflow skills driven by product.md.",
+  "scripts": {
+    "validate": "./scripts/validate.sh",
+    "pack:tar": "mkdir -p dist && tar -czf dist/planning-workflow-skills-0.1.0.tar.gz --exclude dist -C .. planning-skills-package"
+  },
+  "files": [
+    "skills",
+    "scripts",
+    "docs",
+    "snippets",
+    "README.md",
+    "README.it.md"
+  ]
+}
