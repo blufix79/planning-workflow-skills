@@ -39,7 +39,7 @@ Pubblica questa cartella in una repository GitHub, per esempio:
 https://github.com/blufix79/planning-workflow-skills
 ```
 
-Da dentro la repository progetto del collega:
+Da dentro la repository del progetto target:
 
 ```bash
 npx skills@latest add blufix79/planning-workflow-skills --skill '*' -y
@@ -92,7 +92,7 @@ npm run pack:tar
 
 Nessuna dipendenza da altre skill. Il repository target deve contenere un `docs/specifications/product.md` sufficientemente definito prima di avviare `plan-roadmap`.
 
-Le skill di Matt Pocock sono facoltative: possono essere installate separatamente solo se il team vuole usarle per produrre o migliorare `product.md`.
+Le skill di Matt Pocock sono facoltative: possono essere installate separatamente da chi vuole usarle per produrre o migliorare `product.md`.
 
 ## Licenza
 
