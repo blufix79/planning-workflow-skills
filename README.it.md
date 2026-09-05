@@ -23,6 +23,7 @@ skills/
   close-milestone/
 scripts/
   install.sh
+  merge-agents-snippet.sh
   validate.sh
 docs/
   operating-guide.en.md
@@ -60,9 +61,19 @@ npx skills@latest add blufix79/planning-workflow-skills \\
 
 Per installarle globalmente invece che nel singolo progetto, aggiungere `-g`.
 
-Lo script `scripts/install.sh` resta disponibile per installazioni offline o da checkout locale, ma non è necessario per il normale flusso GitHub.
+Lo script `scripts/install.sh` resta disponibile per installazioni offline o da checkout locale, ma non è necessario per il normale flusso GitHub. Può anche integrare le istruzioni del repository con un passaggio esplicito:
 
-Dopo l'installazione, integrare nel progetto target il contenuto di `snippets/AGENTS-planning-workflow.md` dentro `AGENTS.md`, se il workflow non è già documentato.
+```bash
+./scripts/install.sh /path/to/target-repo --merge-agents
+```
+
+Dopo l'installazione con `npx skills`, integrare nel progetto target il contenuto di `snippets/AGENTS-planning-workflow.md` dentro `AGENTS.md`, se il workflow non è già documentato. Per automatizzare il merge da un checkout locale, eseguire:
+
+```bash
+./scripts/merge-agents-snippet.sh /path/to/target-repo
+```
+
+Il merge è idempotente: aggiorna il blocco gestito dai marker se presente, sostituisce una sezione `## Planning workflow` esistente se presente, oppure appende il blocco gestito.
 
 Per il flusso umano e gli esempi di invocazione, consulta la guida: [English](docs/operating-guide.en.md) · [Italiano](docs/guida-operativa.it.md). La preparazione di `docs/specifications/product.md` tramite `$documents` e l'uso delle skill di Matt Pocock sono esplicitamente opzionali.
 

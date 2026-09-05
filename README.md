@@ -23,6 +23,7 @@ skills/
   close-milestone/
 scripts/
   install.sh
+  merge-agents-snippet.sh
   validate.sh
 docs/
   operating-guide.en.md
@@ -60,9 +61,19 @@ npx skills@latest add blufix79/planning-workflow-skills \
 
 Add `-g` to install globally instead of in one project.
 
-`scripts/install.sh` remains available for offline installations or a local checkout, but is unnecessary for the normal GitHub workflow.
+`scripts/install.sh` remains available for offline installations or a local checkout, but is unnecessary for the normal GitHub workflow. It can also merge the repository instructions in one explicit step:
 
-After installation, merge `snippets/AGENTS-planning-workflow.md` into the target project's `AGENTS.md` if the workflow is not already documented.
+```bash
+./scripts/install.sh /path/to/target-repo --merge-agents
+```
+
+After installation with `npx skills`, merge `snippets/AGENTS-planning-workflow.md` into the target project's `AGENTS.md` if the workflow is not already documented. To automate that merge from a local checkout, run:
+
+```bash
+./scripts/merge-agents-snippet.sh /path/to/target-repo
+```
+
+The merge is idempotent: it updates the managed marker block when present, replaces an existing `## Planning workflow` section when present, or appends the managed block otherwise.
 
 For the human workflow and invocation examples, see the guides: [English](docs/operating-guide.en.md) · [Italiano](docs/guida-operativa.it.md). Preparing `docs/specifications/product.md` with `$documents` and using Matt Pocock's skills are explicitly optional.
 
