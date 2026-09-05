@@ -1,3 +1,4 @@
+<!-- planning-workflow:start -->
 ## Planning workflow
 
 Use `docs/specifications/product.md` as the primary product input for planning; supplement it with approved ADRs and relevant repository documentation. Version planning artifacts in `docs/` using this structure as needed: `docs/specifications/`, `docs/architecture/overview.md`, `docs/architecture/adr/`, `docs/planning/roadmap.md`, `docs/planning/project-status.md`, `docs/planning/milestones/`, `docs/planning/tasks/`, and `docs/reviews/milestones/`. Create directories only when producing the first related artifact.
@@ -19,3 +20,4 @@ Planning delivery follows this order: `plan-roadmap` manages `docs/planning/road
 If `docs/planning/project-status.md` is needed and absent, use only these sections: Milestone corrente, Ultima milestone completata, Prossima milestone prevista, Task corrente, Blocchi aperti, Ultimo aggiornamento. Avoid duplicating roadmap, milestone, or task content.
 
 For verification, use commands actually defined by the repository and proportionate to the change: targeted tests, integration tests, full suite, type-check, lint, build, migrations, and manual checks when acceptance criteria require them. Distinguish failures introduced by the change from pre-existing or environmental failures, and do not weaken valid tests to pass.
+<!-- planning-workflow:end -->
